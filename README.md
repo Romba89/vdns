@@ -19,7 +19,7 @@ EN : Better Fork Than File Download & Re-upload</h1>
 - Nginx Port 81
 - Automatic Delete Expired Account
 ### Screenshot
-![jwjssi](https://raw.githubusercontent.com/dugong-lewat/autoscript/main/autoscript.jpg)
+![jwjssi](https://raw.githubusercontent.com/dugong-lewat/autoscript/main/xray.jpg)
 ### Link Installation
 ```
 wget -q -O xray https://raw.githubusercontent.com/dugong-lewat/autoscript/main/xray.sh && chmod +x xray && ./xray
