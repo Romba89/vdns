@@ -21,4 +21,6 @@ EN : Better Fork Than File Download & Re-upload</h1>
 ### Screenshot
 ![jwjssi](https://raw.githubusercontent.com/dugong-lewat/autoscript/main/autoscript.jpg)
 ### Link Installation
-- wait......
+```
+wget -q -O xray https://raw.githubusercontent.com/dugong-lewat/autoscript/main/xray.sh && chmod +x xray && ./xray
+```
