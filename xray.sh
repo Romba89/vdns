@@ -709,7 +709,7 @@ net.ipv4.tcp_max_orphans = 32768
 net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 
 # Hosting
-dugong="raw.githubusercontent.com/dugong-lewat/dugong-lewat/other"
+dugong="raw.githubusercontent.com/dugong-lewat/autoscript/main"
 cd /usr/bin
 ## Menu
 wget -O menu "https://${dugong}/xray/menu/menu.sh"
