@@ -65,7 +65,7 @@ clear
 
 # Add domain(record A)
 touch /usr/local/etc/xray/domain
-echo "Input Domain"
+echo "Add domain recomended cloudflare (RECORD - A)"
 echo " "
 read -rp "Cloudflare Domain recomanded🦁 : " -e dns
 if [ -z $dns ]; then
