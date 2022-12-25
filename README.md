@@ -1,5 +1,4 @@
-<h1>ID : Lebih Baik Fork Daripada Unduh Berkas & Unggah Ulang
-
+<h1>
 EN : Better Fork Than File Download & Re-upload</h1>
 
 ### Protocol Service
