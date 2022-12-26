@@ -536,6 +536,7 @@ cat > /etc/nginx/conf.d/xray.conf << EOF
              ssl_certificate_key /usr/local/etc/xray/private.key;
         }
 EOF
+
 sed -i '$ ilocation /vmess {' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:10001;' /etc/nginx/conf.d/xray.conf
