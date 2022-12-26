@@ -63,11 +63,11 @@ rm /etc/nginx/sites-available/default
 systemctl restart nginx
 clear
 
-# Add domain(record A)
+# Input Domain
 touch /usr/local/etc/xray/domain
-echo "Add domain recomended cloudflare (RECORD - A)"
+echo "Input Domain"
 echo " "
-read -rp "Cloudflare Domain recomanded🦁 : " -e dns
+read -rp "Input domain kamu : " -e dns
 if [ -z $dns ]; then
 echo -e "Nothing input for domain!"
 else
@@ -852,7 +852,7 @@ clear
 echo ""
 echo ""
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}MINI SCRIPT BY MAHBOUB-MILLON${NC}"
+echo -e "                  ${WB}MINI SCRIPT BY Romba89${NC}"
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
 echo -e "  ${WB}»»» Protocol Service «««  |  »»» Network Protocol «««${NC}  "
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
