@@ -63,11 +63,11 @@ rm /etc/nginx/sites-available/default
 systemctl restart nginx
 clear
 
-# Input Domain
+# Domain recomanded
 touch /usr/local/etc/xray/domain
-echo "Input Domain"
+echo "Domain recomanded"
 echo " "
-read -rp "Input domain kamu : " -e dns
+read -rp "Domain recomanded🦁 : " -e dns
 if [ -z $dns ]; then
 echo -e "Nothing input for domain!"
 else
