@@ -852,7 +852,7 @@ clear
 echo ""
 echo ""
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}MINI SCRIPT BY Romba89${NC}"
+echo -e "               ${WB}V2-RAYPLUS BY MAHBOUB-MILLON${NC}"
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
 echo -e "  ${WB}»»» Protocol Service «««  |  »»» Network Protocol «««${NC}  "
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
