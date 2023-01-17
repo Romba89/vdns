@@ -92,7 +92,7 @@ vmesslink1="vmess://$(echo $vlink1 | base64 -w 0)"
 vmesslink2="vmess://$(echo $vlink2 | base64 -w 0)"
 vmesslink3="vmess://$(echo $vlink3 | base64 -w 0)"
 
-cat > /var/www/html/vmess/vmess-$user.txt << END
+cat > /var/www/html/vmess/vmess-$user.yaml << END
 ==========================
     Vmess WS (CDN) TLS    
 ==========================
