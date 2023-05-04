@@ -588,24 +588,7 @@ sed -i '$ iproxy_http_version 1.1;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Upgrade \$http_upgrade;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Host \$host;' /etc/nginx/conf.d/xray.conf
-sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
-sed -i '$ ilocation /socks5 {' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_pass http://127.0.0.1:10006;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_http_version 1.1;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Upgrade \$http_upgrade;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Host \$host;' /etc/nginx/conf.d/xray.conf
-sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
-sed -i '$ ilocation ^~ /vmess-grpc {' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
-sed -i '$ igrpc_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
+sed -i '$ iproxy_se -i '$ igrpc_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_pass grpc://127.0.0.1:20001;' /etc/nginx/conf.d/xray.conf
@@ -750,11 +733,11 @@ wget -O extend-ss2022 "https://${Romba89}/xray/shadowsocks2022/extend-ss2022.sh"
 wget -O trialss2022 "https://${Romba89}/xray/shadowsocks2022/trialss2022.sh"
 wget -O cek-ss2022 "https://${Romba89}/xray/shadowsocks2022/cek-ss2022.sh"
 ## Socks5
-wget -O add-socks "https://${Romba89}/xray/socks/add-socks.sh"
-wget -O del-socks "https://${Romba89}/xray/socks/del-socks.sh"
-wget -O extend-socks "https://${Romba89}/xray/socks/extend-socks.sh"
-wget -O trialsocks "https://${Romba89}/xray/socks/trialsocks.sh"
-wget -O cek-socks "https://${Romba89}/xray/socks/cek-socks.sh"
+wget -O add-socks "https://${Romba89}/xray/socks5/add-socks.sh"
+wget -O del-socks "https://${Romba89}/xray/socks5/del-socks.sh"
+wget -O extend-socks "https://${Romba89}/xray/socks5/extend-socks.sh"
+wget -O trialsocks "https://${Romba89}/xray/socks5/trialsocks.sh"
+wget -O cek-socks "https://${Romba89}/xray/socks5/cek-socks.sh"
 ## Log
 wget -O log-create "https://${Romba89}/xray/log/log-create.sh"
 wget -O log-vmess "https://${Romba89}/xray/log/log-vmess.sh"
@@ -851,23 +834,23 @@ chmod 644 /root/.profile
 clear
 echo ""
 echo ""
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo -e "               ${WB}V2-RAYPLUS BY MAHBOUB-MILLON${NC}"
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo -e "  ${WB}Â»Â»Â» Protocol Service Â«Â«Â«  |  Â»Â»Â» Network Protocol Â«Â«Â«${NC}  "
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo -e "  ${YB}- Vless${NC}                   ${WB}|${NC}  ${YB}- Websocket (CDN) non TLS${NC}"
 echo -e "  ${YB}- Vmess${NC}                   ${WB}|${NC}  ${YB}- Websocket (CDN) TLS${NC}"
 echo -e "  ${YB}- Trojan${NC}                  ${WB}|${NC}  ${YB}- gRPC (CDN) TLS${NC}"
 echo -e "  ${YB}- Socks5${NC}                  ${WB}|${NC}"
 echo -e "  ${YB}- Shadowsocks${NC}             ${WB}|${NC}"
 echo -e "  ${YB}- Shadowsocks 2022${NC}        ${WB}|${NC}"
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo -e "               ${WB}Â»Â»Â» Network Port Service Â«Â«Â«${NC}             "
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo -e "  ${YB}- HTTPS : 443, 2053, 2083, 2087, 2096, 8443${NC}"
 echo -e "  ${YB}- HTTP  : 80, 8080, 8880, 2052, 2082, 2086, 2095${NC}"
-echo -e "${BB}â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”${NC}"
+echo -e "${BB}â€”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7”â„1¤7„1¤7${NC}"
 echo ""
 rm -f xray
 secs_to_human "$(($(date +%s) - ${start}))"
